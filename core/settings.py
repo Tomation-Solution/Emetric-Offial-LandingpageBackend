@@ -45,12 +45,14 @@ INSTALLED_APPS = [
 
         "cloudinary_storage",
     "cloudinary",
+    'corsheaders',
 
         'rest_framework',
      'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
      "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
