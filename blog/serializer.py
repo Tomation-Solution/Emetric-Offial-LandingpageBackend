@@ -20,6 +20,7 @@ class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model =models.BlogPost
         fields = [ 
+            'id',
             'comments','blog_paragraphs',
             'title','main_image','author','category','date_created','get_paragraph_intro'
         ]
