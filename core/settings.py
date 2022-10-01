@@ -165,6 +165,8 @@ CORS_ALLOWED_ORIGINS = [
 'http://emetric-landing-page.herokuapp.com',
 'http://localhost:3000'
 ]
+CSRF_TRUSTED_ORIGINS =CORS_ALLOWED_ORIGINS
+
 
 CORS_ALLOW_METHODS = [
 'DELETE',
