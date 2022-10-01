@@ -6,17 +6,19 @@ from cloudinary_storage.storage import RawMediaCloudinaryStorage
 class Categories(models.Model):
 
     class NameChoices(models.TextChoices):
-        Lifestyle ='Lifestyle'
-        Inspiration = 'Inspiration'
-        Fashion = 'Fashion'
-        Politic = 'Politic'
-        Trending = 'Trending'
-        Culture = 'Culture'
+        Email_Marketing ='Email Marketing'
+        Instagram_Markerting = 'Instagram Markerting'
+        Sales_prospect = 'Sales prospect'
+        Cusomer_retain = 'Cusomer retain'
+        Sales_Process = 'Sales Process'
+        Customers_Experience = 'Customers Experience'
+        Sales_Qualification = 'Sales Qualification'
+        Remote_work = 'Remote work'
     names = models.CharField(max_length=50,choices=NameChoices.choices)
     slug = models.SlugField(default="")
     
     def __str__(self):
-        return self.slug
+        return self.names
 
 
 

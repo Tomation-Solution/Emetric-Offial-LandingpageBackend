@@ -160,6 +160,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
+'https://www.emetricsuite.com',
+'https://emetric-landing-page.herokuapp.com'
 
 ]
 
