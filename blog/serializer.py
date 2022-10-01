@@ -10,7 +10,18 @@ class BlogSerializer(serializers.ModelSerializer):
 
 
     def get_blog_paragraphs(self,blog):
-        return models.BlogParagraph.objects.filter(blogpost=blog).values('input_text','image')
+        all_data = []
+        for para in models.BlogParagraph.objects.filter(blogpost=blog):
+            data = dict()
+            data['input_text'] = para.input_text
+            try:
+                data['image'] = para.image.url
+            except:data['image']=''
+
+            all_data.append(data)
+
+        return all_data
+        # .values('input_text','image')
 
     def get_comments(self,blog):
         return models.Comment.objects.filter(post=blog).values('comment_text','name','date_created')
