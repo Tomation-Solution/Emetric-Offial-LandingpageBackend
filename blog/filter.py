@@ -8,4 +8,4 @@ class BlogFilter(django_filters.FilterSet):
 
     class  Meta:
         model = models.BlogPost
-        fields = ['categories__names']
+        fields = ['categories__names','title']
