@@ -75,3 +75,36 @@ class User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_superuser
+
+
+
+
+
+
+class RegisteredParthers(models.Model):
+    full_name = models.CharField(max_length=300)
+    email = models.EmailField()
+    country = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=100)
+    org_name = models.CharField(max_length=200)
+    designation = models.TextField()
+
+
+    def __str__(self,):return f'{self.full_name} registered as a parther'
+
+
+
+class ContactUs(models.Model):
+    first_name =models.CharField(max_length=300)
+    last_name =models.CharField(max_length=300)
+    email =models.EmailField(max_length=300)
+    phone_number = models.CharField(max_length=100)
+    org_name = models.CharField(max_length=200)
+    org_size = models.IntegerField()
+    job = models.TextField()
+    hear = models.TextField()
+    message = models.TextField()
+    country = models.CharField(max_length=100)
+
+
+    def __str__(self): return self.email
