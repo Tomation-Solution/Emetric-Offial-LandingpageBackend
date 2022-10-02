@@ -3,6 +3,16 @@ from . import models
 
 
 
+
+class EmailSubscribersSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = models.EmailSubscribers
+        fields =[
+            'email',
+        ]
+
 class BlogSerializer(serializers.ModelSerializer):
     comments = serializers.SerializerMethodField()
     blog_paragraphs = serializers.SerializerMethodField()

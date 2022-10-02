@@ -54,3 +54,10 @@ class BlogParagraph(models.Model):
     blogpost = models.ForeignKey(BlogPost,on_delete=models.CASCADE)
     input_text = models.TextField()
     image = models.ImageField(upload_to='blogParagraphImage/%m/%d/',blank=True)
+
+
+
+class EmailSubscribers(models.Model):
+    email = models.EmailField()
+
+    def __str__(self): return f'{self.email} Subscribed'  

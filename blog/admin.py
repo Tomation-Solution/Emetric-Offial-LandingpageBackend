@@ -25,7 +25,7 @@ class BlogpostAdmin(admin.ModelAdmin):
 admin.site.register(models.BlogPost,BlogpostAdmin)
 admin.site.register(models.Categories)
 admin.site.register(models.Comment)
-
+admin.site.register(models.EmailSubscribers)
 
 
 "the settings below has to do with the Admin Designs"
