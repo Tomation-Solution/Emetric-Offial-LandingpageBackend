@@ -7,13 +7,11 @@ class Categories(models.Model):
 
     class NameChoices(models.TextChoices):
         Email_Marketing ='Email Marketing'
-        Instagram_Markerting = 'Instagram Markerting'
-        Sales_prospect = 'Sales prospect'
-        Cusomer_retain = 'Cusomer retain'
-        Sales_Process = 'Sales Process'
-        Customers_Experience = 'Customers Experience'
-        Sales_Qualification = 'Sales Qualification'
-        Remote_work = 'Remote work'
+        Performance_Management='Performance Management'
+        KPI_Analytics='KPI Analytics'
+        Human_Resource_Management=' Human Resource Management'
+        Payroll_Management='Payroll_Management'
+        Leave_Management='Leave Management'
     names = models.CharField(max_length=50,choices=NameChoices.choices)
     slug = models.SlugField(default="")
     
