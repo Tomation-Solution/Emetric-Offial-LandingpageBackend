@@ -4,7 +4,7 @@ create super_user
 from ...models import User
 
 from django.core.management import BaseCommand
-
+import os
 
 class Command(BaseCommand):
     """
@@ -15,7 +15,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         self.stdout.write('Checking if superuser exists')
-        email = 'myadmin@gmail.com'
+        email =os.environ['admin_email']
         if User.objects.filter(email=email).exists():
             self.stdout.write(f'Super Admin Already Exists -> {email}')
 
@@ -23,7 +23,7 @@ class Command(BaseCommand):
             'since the user does not exists we create the user'
             super_user = User.objects.create_superuser(
                 email = email,
-                password ='backup2020',
+                password =os.environ['admin_pass'],
                 first_name=' ',
                 last_name=' ',
             )

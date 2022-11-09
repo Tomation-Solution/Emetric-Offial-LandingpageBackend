@@ -13,8 +13,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        self.stdout.write('Checking if superuser exists')
-        email = 'myadmin@gmail.com'
         if models.Categories.objects.count() != 0:
             self.stdout.write(f'Categories Created')
 
@@ -22,8 +20,8 @@ class Command(BaseCommand):
         else:
             'we createe each categoryu'
             cats = [
-                'Email Marketing','Instagram Markerting','Sales prospect', 'Cusomer retain','Sales Process',
-                
+                   'Leave Management','Payroll_Management',' Human Resource Management','KPI Analytics',
+                   'Performance Management','Email Marketing'
                 ]
             for cat in cats:
                 models.Categories.objects.create(
