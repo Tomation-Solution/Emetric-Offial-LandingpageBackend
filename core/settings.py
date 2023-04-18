@@ -169,7 +169,9 @@ CORS_ALLOWED_ORIGINS = [
 'https://emetric-landing-page.herokuapp.com',
 'http://emetric-landing-page.herokuapp.com',
 'https://web-production-96e8.up.railway.app',
-'http://localhost:3000'
+'http://localhost:3000',
+'https://www.tomationsolution.com',
+'https://tomationsolution.com'
 ]
 CSRF_TRUSTED_ORIGINS =CORS_ALLOWED_ORIGINS
 
