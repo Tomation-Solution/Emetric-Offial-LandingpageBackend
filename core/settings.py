@@ -161,18 +161,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-'https://www.emetricsuite.com',
-'https://emetricsuite.com',
-'http://emetricsuite.com',
-'http://www.emetricsuite.com',
-'https://emetric-landing-page.herokuapp.com',
-'http://emetric-landing-page.herokuapp.com',
-'https://web-production-96e8.up.railway.app',
-'http://localhost:3000',
-'https://www.tomationsolution.com',
-'https://tomationsolution.com'
-]
+CORS_ALLOWED_ORIGINS = os.environ.get('trusted_domain',[])
+
 CSRF_TRUSTED_ORIGINS =CORS_ALLOWED_ORIGINS
 
 
